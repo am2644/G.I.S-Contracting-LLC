@@ -2,6 +2,7 @@ import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BLOG_POSTS } from "@/lib/blog";
+import { assetUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Remodeling Insights for Austin Homeowners | G.I.S Contracting LLC",
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     title: "Remodeling Insights for Austin Homeowners | G.I.S Contracting LLC",
     description:
       "Project stories, practical guidance, and what Austin homeowners say about remodeling with G.I.S Contracting LLC.",
-    images: ["/assets/work/gis-kitchen-island.jpg"],
+    images: [assetUrl("/assets/work/gis-kitchen-island.jpg")],
   },
 };
 
@@ -61,7 +62,7 @@ export default function BlogIndexPage() {
                   className="relative block aspect-[16/10] overflow-hidden bg-mist lg:aspect-auto lg:h-full"
                 >
                   <img
-                    src={post.heroImage}
+                    src={assetUrl(post.heroImage)}
                     alt={post.heroAlt}
                     width="1400"
                     height="1050"

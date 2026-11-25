@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import LoginForm from "@/components/admin/LoginForm";
+import { assetUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Admin Sign In | G.I.S Contracting LLC",
@@ -17,7 +18,7 @@ export default function AdminLoginPage() {
           aria-label="G.I.S Contracting LLC home"
         >
           <img
-            src="/assets/gis-logo.jpg"
+            src={assetUrl("/assets/gis-logo.jpg")}
             alt=""
             width="108"
             height="108"

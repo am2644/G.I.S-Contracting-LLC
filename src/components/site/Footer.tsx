@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {
   ADDRESS_FULL,
+  assetUrl,
   GOOGLE_RATING,
   GOOGLE_REVIEW_COUNT,
   GOOGLE_REVIEWS_URL,
@@ -21,7 +22,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-3" aria-label="G.I.S Contracting LLC home">
               <img
-                src="/assets/gis-logo.jpg"
+                src={assetUrl("/assets/gis-logo.jpg")}
                 alt=""
                 width="108"
                 height="108"

@@ -7,6 +7,7 @@ import { INSTAGRAM_POSTS } from "@/lib/instagram";
 import { REVIEWS } from "@/lib/reviews";
 import {
   ADDRESS_FULL,
+  assetUrl,
   GOOGLE_RATING,
   GOOGLE_REVIEW_COUNT,
   GOOGLE_REVIEWS_URL,
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     title: "G.I.S Contracting LLC | Kitchen, Bath & Whole-Home Remodeling in Austin, TX",
     description:
       "Family-owned residential and commercial contractor in Austin, TX. Kitchen and bathroom remodels, whole-home renovations, roofing, painting, and restoration. 4.7 stars from 38 Google reviews.",
-    images: ["/assets/work/gis-kitchen-island.jpg"],
+    images: [assetUrl("/assets/work/gis-kitchen-island.jpg")],
   },
 };
 
@@ -35,7 +36,7 @@ export default function HomePage() {
     <>
       <section className="relative isolate flex min-h-[55svh] items-center overflow-hidden bg-ink text-white">
         <img
-          src="/assets/work/gis-kitchen-island.jpg"
+          src={assetUrl("/assets/work/gis-kitchen-island.jpg")}
           alt="Remodeled Austin kitchen with white cabinetry, an island, and stainless steel appliances"
           width="1080"
           height="720"
@@ -44,8 +45,8 @@ export default function HomePage() {
         />
         <video
           className="hero-video absolute inset-0 -z-10 h-full w-full object-cover object-center"
-          src="/assets/hero-video.mp4"
-          poster="/assets/hero-video-poster.jpg"
+          src={assetUrl("/assets/hero-video.mp4")}
+          poster={assetUrl("/assets/hero-video-poster.jpg")}
           autoPlay
           muted
           loop
@@ -121,7 +122,7 @@ export default function HomePage() {
                 className="group/image relative block overflow-hidden rounded-2xl bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
               >
                 <img
-                  src="/assets/work/gis-kitchen-island.jpg"
+                  src={assetUrl("/assets/work/gis-kitchen-island.jpg")}
                   alt="White kitchen remodel with an island, quartz counters, and stainless appliances in Austin"
                   width="1400"
                   height="1050"
@@ -163,7 +164,7 @@ export default function HomePage() {
                 className="group/image relative block overflow-hidden rounded-2xl bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
               >
                 <img
-                  src="/assets/work/gis-bathroom-freestanding-tub.jpg"
+                  src={assetUrl("/assets/work/gis-bathroom-freestanding-tub.jpg")}
                   alt="Bathroom remodel with a freestanding soaking tub, glass shower, and tile floor in Austin"
                   width="787"
                   height="1400"
@@ -205,7 +206,7 @@ export default function HomePage() {
                 className="group/image relative block overflow-hidden rounded-2xl bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
               >
                 <img
-                  src="/assets/work/gis-home-exterior-stone.jpg"
+                  src={assetUrl("/assets/work/gis-home-exterior-stone.jpg")}
                   alt="Custom stone home exterior with a tile roof and arched windows in Austin"
                   width="1400"
                   height="1050"
@@ -319,7 +320,7 @@ export default function HomePage() {
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
               <div className="flex items-center gap-3">
                 <img
-                  src="/assets/gis-logo.jpg"
+                  src={assetUrl("/assets/gis-logo.jpg")}
                   alt=""
                   width="108"
                   height="108"
@@ -360,7 +361,7 @@ export default function HomePage() {
               >
                 <div className="relative aspect-square overflow-hidden bg-mist">
                   <img
-                    src={post.image}
+                    src={assetUrl(post.image)}
                     alt={post.alt}
                     width="800"
                     height="800"

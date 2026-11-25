@@ -3,6 +3,7 @@ import Link from "next/link";
 import AdminNav from "@/components/admin/AdminNav";
 import { logoutAdmin } from "@/lib/actions/auth";
 import { requireAdmin } from "@/lib/auth";
+import { assetUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Admin | G.I.S Contracting LLC",
@@ -17,7 +18,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       <aside className="bg-ink text-white lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-64 lg:shrink-0 lg:flex-col">
         <div className="flex items-center gap-3 px-5 py-5">
           <img
-            src="/assets/gis-logo.jpg"
+            src={assetUrl("/assets/gis-logo.jpg")}
             alt=""
             width="108"
             height="108"

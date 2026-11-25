@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { assetUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About G.I.S Contracting LLC | Austin, TX",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
     title: "About G.I.S Contracting LLC | Austin, TX",
     description:
       "Meet Tony Gomez and G.I.S Contracting LLC — a family-owned residential and commercial contractor serving Austin since 1998, rated 4.7 from 38 Google reviews.",
-    images: ["/assets/work/gis-home-exterior-stone.jpg"],
+    images: [assetUrl("/assets/work/gis-home-exterior-stone.jpg")],
   },
 };
 
@@ -71,7 +72,7 @@ export default function AboutPage() {
             >
               <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-ink">
                 <img
-                  src="/assets/work/gis-stone-entry.jpg"
+                  src={assetUrl("/assets/work/gis-stone-entry.jpg")}
                   alt="Stone entry and foyer completed by G.I.S Contracting in Austin, Texas"
                   width={825}
                   height={1024}

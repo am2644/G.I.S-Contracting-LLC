@@ -1,3 +1,11 @@
+export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+export function assetUrl(path: string) {
+  if (!path || !path.startsWith("/")) return path;
+  if (BASE_PATH && path.startsWith(`${BASE_PATH}/`)) return path;
+  return `${BASE_PATH}${path}`;
+}
+
 export const BUSINESS_NAME = "G.I.S Contracting LLC";
 export const BUSINESS_SHORT_NAME = "G.I.S Contracting";
 export const PHONE_DISPLAY = "(512) 801-6132";

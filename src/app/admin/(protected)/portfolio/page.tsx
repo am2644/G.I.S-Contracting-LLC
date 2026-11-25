@@ -3,7 +3,7 @@ import PortfolioForm from "@/components/admin/PortfolioForm";
 import FallbackImage from "@/components/ui/FallbackImage";
 import { formatShortDate } from "@/lib/format";
 import { prisma } from "@/lib/db";
-import { PORTFOLIO_CATEGORY_LABELS } from "@/lib/site";
+import { assetUrl, PORTFOLIO_CATEGORY_LABELS } from "@/lib/site";
 
 export const dynamic = "force-dynamic";
 
@@ -57,7 +57,7 @@ export default async function AdminPortfolioPage() {
                       aria-hidden="true"
                     >
                       <img
-                        src="/assets/gis-logo.jpg"
+                        src={assetUrl("/assets/gis-logo.jpg")}
                         alt=""
                         width="108"
                         height="108"
@@ -65,7 +65,7 @@ export default async function AdminPortfolioPage() {
                       />
                     </div>
                     <FallbackImage
-                      src={item.imageUrl}
+                      src={assetUrl(item.imageUrl)}
                       alt={item.title}
                       loading="lazy"
                       className="absolute inset-0 h-full w-full object-cover"

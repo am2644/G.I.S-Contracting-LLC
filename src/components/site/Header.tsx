@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { NAV_LINKS } from "@/lib/site";
+import { assetUrl, NAV_LINKS } from "@/lib/site";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -29,7 +29,7 @@ export default function Header() {
         <div className="flex h-20 items-center justify-between gap-6">
           <Link href="/" className="flex items-center" aria-label="G.I.S Contracting LLC home">
             <img
-              src="/assets/gis-logo.jpg"
+              src={assetUrl("/assets/gis-logo.jpg")}
               alt=""
               width="108"
               height="108"

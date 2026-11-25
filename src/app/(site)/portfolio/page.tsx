@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PortfolioGallery from "@/components/portfolio/PortfolioGallery";
 import { prisma } from "@/lib/db";
+import { assetUrl } from "@/lib/site";
 
 export const dynamic = "force-dynamic";
 
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     title: "Remodeling Projects in Austin, TX | G.I.S Contracting LLC",
     description:
       "Recent kitchen, bathroom, whole-home, and exterior projects in Austin, TX by G.I.S Contracting LLC.",
-    images: ["/assets/work/gis-kitchen-island.jpg"],
+    images: [assetUrl("/assets/work/gis-kitchen-island.jpg")],
   },
 };
 

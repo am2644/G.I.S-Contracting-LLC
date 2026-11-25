@@ -4,6 +4,7 @@ import QuoteForm from "@/components/ui/QuoteForm";
 import {
   ADDRESS_CITY,
   ADDRESS_LINE,
+  assetUrl,
   GOOGLE_REVIEWS_URL,
   INSTAGRAM_HANDLE,
   INSTAGRAM_URL,
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     title: "Contact G.I.S Contracting LLC | Austin, TX",
     description:
       "Contact G.I.S Contracting LLC in Austin, TX. Call (512) 801-6132 or request a free estimate for your kitchen, bathroom, whole-home, or exterior project.",
-    images: ["/assets/work/gis-kitchen-island.jpg"],
+    images: [assetUrl("/assets/work/gis-kitchen-island.jpg")],
   },
 };
 

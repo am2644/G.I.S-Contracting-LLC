@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { assetUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contracting Services in Austin, TX | G.I.S Contracting LLC",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
     title: "Contracting Services in Austin, TX | G.I.S Contracting LLC",
     description:
       "Kitchen and bathroom remodeling, whole-home renovations, roofing, painting, restoration, and commercial work in Austin, TX. Family-owned since 1998. Free estimates.",
-    images: ["/assets/work/gis-kitchen-island.jpg"],
+    images: [assetUrl("/assets/work/gis-kitchen-island.jpg")],
   },
 };
 
@@ -95,7 +96,7 @@ export default function ServicesPage() {
               className="opacity-0 translate-y-8 transition-all duration-700 delay-100 ease-out"
             >
               <img
-                src="/assets/work/gis-kitchen-island.jpg"
+                src={assetUrl("/assets/work/gis-kitchen-island.jpg")}
                 alt="White kitchen with an island, quartz countertops, and stainless appliances in Austin"
                 width="1600"
                 height="1067"
@@ -128,7 +129,7 @@ export default function ServicesPage() {
               className="opacity-0 translate-y-8 transition-all duration-700 delay-100 ease-out lg:order-1"
             >
               <img
-                src="/assets/work/gis-bathroom-freestanding-tub.jpg"
+                src={assetUrl("/assets/work/gis-bathroom-freestanding-tub.jpg")}
                 alt="Austin bathroom renovation with a freestanding soaking tub and glass shower"
                 width="1600"
                 height="2133"
@@ -158,7 +159,7 @@ export default function ServicesPage() {
               className="opacity-0 translate-y-8 transition-all duration-700 delay-100 ease-out"
             >
               <img
-                src="/assets/work/gis-staircase-foyer.jpg"
+                src={assetUrl("/assets/work/gis-staircase-foyer.jpg")}
                 alt="Custom home staircase with a curved wrought-iron railing and tiled landing in Austin"
                 width="1600"
                 height="1067"
@@ -191,7 +192,7 @@ export default function ServicesPage() {
               className="opacity-0 translate-y-8 transition-all duration-700 delay-100 ease-out lg:order-1"
             >
               <img
-                src="/assets/work/gis-home-exterior-stone.jpg"
+                src={assetUrl("/assets/work/gis-home-exterior-stone.jpg")}
                 alt="Stone and stucco home exterior with a clay tile roof and arched windows"
                 width="1600"
                 height="1067"
